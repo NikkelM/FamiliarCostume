@@ -24,4 +24,4 @@ Select the new cosmetics from the in-game familiar costume menu. Requires the ba
 
 ## Issues
 
-Report any issues [here](https://github.com/adi1998/FamiliarCostume/issues) or on [Discord](https://discord.gg/bKvJTAJj) in the requests-h2/Costume selector thread
+Report any issues [here](https://github.com/adi1998/FamiliarCostume/issues) or on [Discord](https://discord.gg/KuMbyrN) in the requests-h2/Costume selector thread
