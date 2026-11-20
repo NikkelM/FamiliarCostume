@@ -498,8 +498,6 @@ for familiar, costumeIds in pairs(itemCategories) do
 	end
 end
 
-game.ScreenData.FamiliarCostumeShop.PinOffsetX = 265
-
 game.ScreenData.FamiliarCostumeShop.ComponentData.ActionBar.ChildrenOrder = {
 	"CloseButton",
 	"SelectButton",

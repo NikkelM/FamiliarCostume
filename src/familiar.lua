@@ -11,6 +11,12 @@ function mod.dump(o)
    end
 end
 
+local favoriteIconData = {
+    Scale = 0.32,
+    OffsetY = 16,
+    OffsetX = 50
+}
+
 function mod.ToggleFavoriteFamiliarCostume( screen, button )
     local selectedItem = screen.SelectedItem
     if selectedItem == nil then
@@ -29,7 +35,7 @@ function mod.ToggleFavoriteFamiliarCostume( screen, button )
         game.GameState.ModFamiliarCostumesFavorites[screen.OpenedFrom.Name][selectedItem.Data.Name] = IsFavorite
         if IsFavorite then
             local animationName = "FilledHeartIcon"
-            game.SetAnimation({ Name = animationName, DestinationId = selectedItem.FavButtonId, Scale = 0.3, OffsetY = 15})
+            game.SetAnimation({ Name = animationName, DestinationId = selectedItem.FavButtonId, Scale = favoriteIconData.Scale, OffsetY = favoriteIconData.OffsetY, OffsetX = favoriteIconData.OffsetX})
             game.SetAlpha({ Id = selectedItem.FavButtonId, Fraction = 1.0, Duration = 0.1 })
         else
             game.SetAlpha({ Id = selectedItem.FavButtonId, Fraction = 0.0, Duration = 0.1 })
@@ -61,4 +67,37 @@ modutil.mod.Path.Wrap("OpenFamiliarCostumeScreen",function (base,...)
         game.ScreenData.FamiliarCostumeShop.ComponentData.ActionBar.Children.RandomizeButton.TextArgs.Color = { 0.5, 0.5, 0.5, 1.0 }
     end
     return base(...)
+end)
+
+modutil.mod.Path.Wrap("FamiliarCostumeShopUpdateVisibility", function (base, screen, args)
+    return (function (retval)
+        args = args or {}
+        local components = screen.Components
+
+        screen.ButtonIds = {}
+
+        for index, itemName in ipairs( screen.ItemCategories[screen.OpenedFrom.Name] ) do
+            local button = components[itemName.."Button"]
+            if button then
+                game.GameState.ModFamiliarCostumesFavorites = game.GameState.ModFamiliarCostumesFavorites or {
+                    HoundFamiliar = {},
+                    FrogFamiliar = {},
+                    RavenFamiliar = {},
+                    CatFamiliar = {},
+                    PolecatFamiliar = {}
+                }
+                local favIcon = game.CreateScreenComponent({ Name = "BlankObstacle", Group = screen.ComponentData.DefaultGroup, Alpha = 0.0, })
+                components[itemName .. "FavIcon"] = favIcon
+                table.insert( button.AssociatedIds, favIcon.Id )
+                game.Attach({ Id = favIcon.Id, DestinationId = button.Id, OffsetX = screen.PinOffsetX, OffsetY = game.UIData.PinIconListOffsetY })
+                button.FavButtonId = favIcon.Id
+                if game.GameState.ModFamiliarCostumesFavorites[screen.OpenedFrom.Name][itemName] == true then
+                    game.SetAnimation({ Name = "FilledHeartIcon", DestinationId = button.FavButtonId, Scale = favoriteIconData.Scale, OffsetY = favoriteIconData.OffsetY, OffsetX = favoriteIconData.OffsetX})
+                    game.SetAlpha({ Id = favIcon.Id, Fraction = 1.0, Duration = 0.1 })
+                end
+            end
+        end
+
+        return retval
+    end)(base(screen, args))
 end)
