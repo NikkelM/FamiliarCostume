@@ -1,15 +1,5 @@
-mod.skinPackageList = {}
-table.insert(mod.skinPackageList, _PLUGIN.guid .. "zerp-Familiar_Costume_Randomizer")
-table.insert(mod.skinPackageList, _PLUGIN.guid .. "zerp-Familiar_Costume_RandomizerSkins")
-
-function mod.LoadSkinPackages()
-    game.LoadPackages({Names = mod.skinPackageList})
-end
-
-modutil.mod.Path.Wrap("SetupMap", function(base)
-    mod.LoadSkinPackages()
-    base()
-end)
+CosmeticsAPI.RegisterCrossroadsPackages({ _PLUGIN.guid .. "zerp-Familiar_Costume_Randomizer" })
+CosmeticsAPI.RegisterAlwaysLoadedPackages({ _PLUGIN.guid .. "zerp-Familiar_Costume_RandomizerSkins" })
 
 function mod.GetUnlockedFamiliarCostumes(costumeList)
     local unlockedCostumes = {}
@@ -46,9 +36,8 @@ modutil.mod.Path.Wrap("StartNewRun", function(base, prevRun, args)
 
     if config.random then
         local currentFamiliar = game.GameState.EquippedFamiliar
-        game.GameState.ModFamiliarCostumes = game.GameState.ModFamiliarCostumes or {}
-        if currentFamiliar ~= nil then
-            local costumeList = game.ScreenData.FamiliarCostumeShop.ItemCategories[currentFamiliar]
+        local costumeList = game.ScreenData.FamiliarCostumeShop.ItemCategories[currentFamiliar]
+        if costumeList ~= nil then
             local favoriteList = mod.GetFavorites(costumeList, currentFamiliar)
             local randomCostume
             if #favoriteList > 0 then
@@ -57,13 +46,8 @@ modutil.mod.Path.Wrap("StartNewRun", function(base, prevRun, args)
                 randomCostume = game.GetRandomArrayValue(mod.GetUnlockedFamiliarCostumes(costumeList))
             end
 
-            -- don't write modded data in basegame tables
-            if FamiliarCostumeData[randomCostume] ~= nil then
-                game.GameState.FamiliarCostumes[currentFamiliar] = game.FamiliarData[currentFamiliar].DefaultCostume
-                game.GameState.ModFamiliarCostumes[currentFamiliar] = randomCostume
-            else
-                game.GameState.ModFamiliarCostumes[currentFamiliar] = nil
-                game.GameState.FamiliarCostumes[currentFamiliar] = randomCostume
+            if randomCostume ~= nil then
+                CosmeticsAPI.SelectFamiliarCostume(currentFamiliar, randomCostume)
             end
         end
     end

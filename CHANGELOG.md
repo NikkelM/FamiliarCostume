@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Migrated adding custom familiar skins to the CosmeticsAPI.
+
 ## [1.1.1] - 2026-04-16
 
 - Add missing outline for Cerberus Visage forms

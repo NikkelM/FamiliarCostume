@@ -23,8 +23,9 @@ game = rom.game
 ---@module 'game-import'
 import_as_fallback(game)
 
----@module 'SGG_Modding-SJSON'
-sjson = mods['SGG_Modding-SJSON']
+---@module 'NikkelM-Cosmetics_API'
+CosmeticsAPI = mods['NikkelM-Cosmetics_API']
+
 ---@module 'SGG_Modding-ModUtil'
 modutil = mods['SGG_Modding-ModUtil']
 
@@ -43,7 +44,6 @@ local function on_ready()
     -- what to do when we are ready, but not re-do on reload.
     mod = modutil.mod.Mod.Register(_PLUGIN.guid)
 
-    import 'sjson.lua'
     import 'familiardata.lua'
     import 'familiar.lua'
     import 'ready.lua'

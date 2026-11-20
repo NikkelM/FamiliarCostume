@@ -1,13 +1,13 @@
-FamiliarCostumeData = {
-    FamiliarCostume_FrogBrown =
+local familiarCostumeData = {
+	FamiliarCostume_FrogBrown =
 	{
 		Icon = _PLUGIN.guid .. "frog_brown",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "Frog_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogBrown_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogBrown_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -21,15 +21,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_FrogGreen =
+	FamiliarCostume_FrogGreen =
 	{
 		Icon = _PLUGIN.guid .. "frog_green",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "Frog_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogGreen_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogGreen_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -43,15 +43,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_FrogGrey =
+	FamiliarCostume_FrogGrey =
 	{
 		Icon = _PLUGIN.guid .. "frog_grey",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "Frog_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogGrey_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogGrey_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -65,15 +65,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_FrogYellow =
+	FamiliarCostume_FrogYellow =
 	{
 		Icon = _PLUGIN.guid .. "frog_yellow",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "Frog_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogYellow_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/frog/CritterFrogYellow_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -87,15 +87,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_HoundBeige =
+	FamiliarCostume_HoundBeige =
 	{
 		Icon = _PLUGIN.guid .. "hound_beige",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "HoundFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/hound/CritterDogBeige_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/hound/CritterDogBeige_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -109,15 +109,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_HoundTan =
+	FamiliarCostume_HoundTan =
 	{
 		Icon = _PLUGIN.guid .. "hound_tan",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "HoundFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/hound/CritterDogTan_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/hound/CritterDogTan_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -131,15 +131,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_HoundOrange =
+	FamiliarCostume_HoundOrange =
 	{
 		Icon = _PLUGIN.guid .. "hound_orange",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "HoundFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/hound/CritterDogOrange_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/hound/CritterDogOrange_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -153,15 +153,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_RavenBlack =
+	FamiliarCostume_RavenBlack =
 	{
 		Icon = _PLUGIN.guid .. "bird_black",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CritterRaven_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/raven/CritterRavenBlack_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/raven/CritterRavenBlack_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -180,10 +180,10 @@ FamiliarCostumeData = {
 		Icon = _PLUGIN.guid .. "bird_green",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "RavenFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/raven/DefaultRavenGreen_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/raven/DefaultRavenGreen_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -197,15 +197,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_CatBicolor =
+	FamiliarCostume_CatBicolor =
 	{
 		Icon = _PLUGIN.guid .. "cat_bicolor",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CatFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatBicolor_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatBicolor_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -219,15 +219,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_CatBlack =
+	FamiliarCostume_CatBlack =
 	{
 		Icon = _PLUGIN.guid .. "cat_black",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CatFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatBlack_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatBlack_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -241,15 +241,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_CatSpotted =
+	FamiliarCostume_CatSpotted =
 	{
 		Icon = _PLUGIN.guid .. "cat_spotted",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CatFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatSpotted_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatSpotted_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -263,15 +263,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_CatTabby =
+	FamiliarCostume_CatTabby =
 	{
 		Icon = _PLUGIN.guid .. "cat_tabby",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CatFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatTabby_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatTabby_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -285,15 +285,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_CatTuxedo =
+	FamiliarCostume_CatTuxedo =
 	{
 		Icon = _PLUGIN.guid .. "cat_tuxedo",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CatFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatTuxedo_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatTuxedo_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -307,15 +307,15 @@ FamiliarCostumeData = {
 		},
 	},
 
-    FamiliarCostume_CatWhite =
+	FamiliarCostume_CatWhite =
 	{
 		Icon = _PLUGIN.guid .. "cat_white",
 		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "CatFamiliar_Mesh",
-        GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatWhite_Color",
+		GrannyTexture = _PLUGIN.guid .. "Skins" .. "/cat/CritterCatWhite_Color",
 
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		PreRevealVoiceLines =
 		{
@@ -331,10 +331,10 @@ FamiliarCostumeData = {
 
 	FamiliarCostume_CerberusBase = {
 		Icon = _PLUGIN.guid .. "cerb_default",
-		InheritFrom = {"DefaultFamiliarCostume"},
+		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "InfestedCerberus_Mesh",
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		SwitchCostumeVoiceLines =
 		{
@@ -344,11 +344,11 @@ FamiliarCostumeData = {
 
 	FamiliarCostume_CerberusEM = {
 		Icon = _PLUGIN.guid .. "cerb_unrivaled",
-		InheritFrom = {"DefaultFamiliarCostume"},
+		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "InfestedCerberus_Mesh",
 		GrannyTexture = "GR2/InfestedCerberusEM_Color",
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		SwitchCostumeVoiceLines =
 		{
@@ -358,11 +358,11 @@ FamiliarCostumeData = {
 
 	FamiliarCostume_CerberusEM2 = {
 		Icon = _PLUGIN.guid .. "cerb_unrivaled2",
-		InheritFrom = {"DefaultFamiliarCostume"},
+		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "InfestedCerberus_Mesh",
 		GrannyTexture = "GR2/InfestedCerberusEM2_Color",
 		AlwaysRevealImmediately = true,
-        Cost = {},
+		Cost = {},
 
 		SwitchCostumeVoiceLines =
 		{
@@ -372,7 +372,7 @@ FamiliarCostumeData = {
 
 	FamiliarCostume_CerberusDream = {
 		Icon = _PLUGIN.guid .. "cerb_dream",
-		InheritFrom = {"DefaultFamiliarCostume"},
+		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "InfestedCerberus_Mesh",
 		GrannyTexture = "GR2/InfestedCerberusDream_Color",
 		AlwaysRevealImmediately = true,
@@ -387,7 +387,7 @@ FamiliarCostumeData = {
 			Threshold = 0.6,
 		},
 
-        Cost = {},
+		Cost = {},
 
 		SwitchCostumeVoiceLines =
 		{
@@ -397,7 +397,7 @@ FamiliarCostumeData = {
 
 	FamiliarCostume_CerberusDreamEM = {
 		Icon = _PLUGIN.guid .. "cerb_dream_em",
-		InheritFrom = {"DefaultFamiliarCostume"},
+		InheritFrom = { "DefaultFamiliarCostume" },
 		GrannyModel = "InfestedCerberus_Mesh",
 		GrannyTexture = "GR2/InfestedCerberusDreamEM_Color",
 		AlwaysRevealImmediately = true,
@@ -412,7 +412,7 @@ FamiliarCostumeData = {
 			Threshold = 0.6,
 		},
 
-        Cost = {},
+		Cost = {},
 
 		SwitchCostumeVoiceLines =
 		{
@@ -421,43 +421,33 @@ FamiliarCostumeData = {
 	},
 }
 
-game.OverwriteTableKeys( game.WorldUpgradeData, FamiliarCostumeData)
-
-mod.FamiliarList = {
-    ItemCategories = {
-        FrogFamiliar = {
-            "FamiliarCostume_FrogBrown",
-            "FamiliarCostume_FrogGreen",
-            "FamiliarCostume_FrogGrey",
-            "FamiliarCostume_FrogYellow",
-        },
-        CatFamiliar = {
-            "FamiliarCostume_CatBicolor",
-            "FamiliarCostume_CatBlack",
-            "FamiliarCostume_CatSpotted",
-            "FamiliarCostume_CatTabby",
-            "FamiliarCostume_CatTuxedo",
-            "FamiliarCostume_CatWhite",
-        },
-        RavenFamiliar =
-		{
-			"FamiliarCostume_RavenBlack",
-			"FamiliarCostume_RavenGreen",
-        },
-        HoundFamiliar =
-		{
-			"FamiliarCostume_HoundBeige",
-            "FamiliarCostume_HoundOrange",
-            "FamiliarCostume_HoundTan",
-        }
-    }
+local itemCategories = {
+	FrogFamiliar = {
+		"FamiliarCostume_FrogBrown",
+		"FamiliarCostume_FrogGreen",
+		"FamiliarCostume_FrogGrey",
+		"FamiliarCostume_FrogYellow",
+	},
+	CatFamiliar = {
+		"FamiliarCostume_CatBicolor",
+		"FamiliarCostume_CatBlack",
+		"FamiliarCostume_CatSpotted",
+		"FamiliarCostume_CatTabby",
+		"FamiliarCostume_CatTuxedo",
+		"FamiliarCostume_CatWhite",
+	},
+	RavenFamiliar =
+	{
+		"FamiliarCostume_RavenBlack",
+		"FamiliarCostume_RavenGreen",
+	},
+	HoundFamiliar =
+	{
+		"FamiliarCostume_HoundBeige",
+		"FamiliarCostume_HoundOrange",
+		"FamiliarCostume_HoundTan",
+	}
 }
-
-for familiar, familiarCostumeList in pairs(mod.FamiliarList.ItemCategories) do
-    for _, familiarCostume in ipairs(familiarCostumeList) do
-        table.insert(game.ScreenData.FamiliarCostumeShop.ItemCategories[familiar], familiarCostume)
-    end
-end
 
 mod.CerbFamiliarItems = {
 	"FamiliarCostume_CerberusBase",
@@ -467,60 +457,48 @@ mod.CerbFamiliarItems = {
 	"FamiliarCostume_CerberusDreamEM",
 }
 
-if rom.mods["zerp-Cerberus_Familiar"]  ~= nil then
-	game.ScreenData.FamiliarCostumeShop.ItemCategories["HoundFamiliar"] = mod.CerbFamiliarItems
+if rom.mods["zerp-Cerberus_Familiar"] ~= nil then
+	itemCategories.HoundFamiliar = mod.CerbFamiliarItems
+	game.ScreenData.FamiliarCostumeShop.ItemCategories.HoundFamiliar = {}
 end
 
-mod.FamiliarMenuData = {
-    ItemStartX = 515,
-	ItemStartY = 150,
-	ItemSpacingY = 60,
-	IconOffsetX = -388,
-	IconOffsetY = -1,
-	IconScale = 0.5,
-	ItemsPerPage = 11,
-
-	PinOffsetX = 265,
-
-    ItemAvailableAnimation = "MusicPlayerItemButton",
-	ItemAvailableMouseOverAnimation = "MusicPlayerItemNowPlaying",
-	ItemAvailableMouseOffAnimation = "MusicPlayerItemButton",
-
-    ItemAvailableAffordableNameFormat =
-	{
-		OffsetX = -320,
-		FontSize = 16,
-        ScaleY = 0.5
-    },
-
-    ItemAvailableUnaffordableNameFormat =
-	{
-		OffsetX = -320,
-		FontSize = 16,
-        ScaleY = 0.5
-    },
-
-    ItemPurchasedNameFormat =
-	{
-		OffsetX = -320,
-		FontSize = 16,
-        ScaleY = 0.5
-    },
-
-    CostDisplay =
-	{
-		StartX = 1200,
-		StartY = 150,
-		SpacerX = 160,
-		InventoryAmountOffsetY = 90,
-		ResourceIconOffsetY = -5,
-		ResourceIconScale = 1.1,
-		InventoryIconOffsetX = -25,
-		InventoryIconScale = 0.45,
-	},
+local familiarCostumeNames = {
+	FamiliarCostume_FrogBrown = "Brown",
+	FamiliarCostume_FrogGreen = "Green",
+	FamiliarCostume_FrogGrey = "Grey",
+	FamiliarCostume_FrogYellow = "Yellow",
+	FamiliarCostume_HoundBeige = "Beige",
+	FamiliarCostume_HoundTan = "Tan",
+	FamiliarCostume_HoundOrange = "Orange",
+	FamiliarCostume_RavenBlack = "Black",
+	FamiliarCostume_RavenGreen = "Green",
+	FamiliarCostume_CatBicolor = "Bicolor",
+	FamiliarCostume_CatBlack = "Black",
+	FamiliarCostume_CatSpotted = "Spotted",
+	FamiliarCostume_CatTabby = "Tabby",
+	FamiliarCostume_CatTuxedo = "Tuxedo",
+	FamiliarCostume_CatWhite = "White",
+	FamiliarCostume_CerberusBase = "Default",
+	FamiliarCostume_CerberusEM = "Unrivaled",
+	FamiliarCostume_CerberusEM2 = "Unrivaled Phase 2",
+	FamiliarCostume_CerberusDream = "Visage",
+	FamiliarCostume_CerberusDreamEM = "Unrivaled Visage",
 }
 
-game.ScreenData.FamiliarCostumeShop = game.DeepMergeTables(game.ScreenData.FamiliarCostumeShop, mod.FamiliarMenuData)
+for familiar, costumeIds in pairs(itemCategories) do
+	for _, id in ipairs(costumeIds) do
+		local costume = familiarCostumeData[id]
+		costume.Id = id
+		costume.FamiliarName = familiar
+		costume.Name = { en = familiarCostumeNames[id] }
+		costume.Description = { en = "" }
+		costume.IconPath = _PLUGIN.guid .. "/" .. costume.Icon:sub(#_PLUGIN.guid + 1)
+		costume.IconScale = 1.1
+		CosmeticsAPI.RegisterFamiliarCostume(costume)
+	end
+end
+
+game.ScreenData.FamiliarCostumeShop.PinOffsetX = 265
 
 game.ScreenData.FamiliarCostumeShop.ComponentData.ActionBar.ChildrenOrder = {
 	"CloseButton",
@@ -559,5 +537,3 @@ game.ScreenData.FamiliarCostumeShop.ComponentData.ActionBar.Children.RandomizeBu
 	Text = "{CF} RANDOMIZE",
 	TextArgs = game.DeepCopyTable(game.UIData.ContextualButtonFormatRight),
 }
-
-game.ProcessDataStore(game.WorldUpgradeData)
