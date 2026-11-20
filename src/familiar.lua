@@ -14,7 +14,8 @@ end
 local favoriteIconData = {
     Scale = 0.32,
     OffsetY = 16,
-    OffsetX = 50
+    OffsetX = 50,
+    Animation = "FilledHeartIcon"
 }
 
 function mod.ToggleFavoriteFamiliarCostume( screen, button )
@@ -34,8 +35,7 @@ function mod.ToggleFavoriteFamiliarCostume( screen, button )
         IsFavorite = not IsFavorite == true
         game.GameState.ModFamiliarCostumesFavorites[screen.OpenedFrom.Name][selectedItem.Data.Name] = IsFavorite
         if IsFavorite then
-            local animationName = "FilledHeartIcon"
-            game.SetAnimation({ Name = animationName, DestinationId = selectedItem.FavButtonId, Scale = favoriteIconData.Scale, OffsetY = favoriteIconData.OffsetY, OffsetX = favoriteIconData.OffsetX})
+            game.SetAnimation({ Name = favoriteIconData.Animation, DestinationId = selectedItem.FavButtonId, Scale = favoriteIconData.Scale, OffsetY = favoriteIconData.OffsetY, OffsetX = favoriteIconData.OffsetX})
             game.SetAlpha({ Id = selectedItem.FavButtonId, Fraction = 1.0, Duration = 0.1 })
         else
             game.SetAlpha({ Id = selectedItem.FavButtonId, Fraction = 0.0, Duration = 0.1 })
@@ -92,7 +92,7 @@ modutil.mod.Path.Wrap("FamiliarCostumeShopUpdateVisibility", function (base, scr
                 game.Attach({ Id = favIcon.Id, DestinationId = button.Id, OffsetX = screen.PinOffsetX, OffsetY = game.UIData.PinIconListOffsetY })
                 button.FavButtonId = favIcon.Id
                 if game.GameState.ModFamiliarCostumesFavorites[screen.OpenedFrom.Name][itemName] == true then
-                    game.SetAnimation({ Name = "FilledHeartIcon", DestinationId = button.FavButtonId, Scale = favoriteIconData.Scale, OffsetY = favoriteIconData.OffsetY, OffsetX = favoriteIconData.OffsetX})
+                    game.SetAnimation({ Name = favoriteIconData.Animation, DestinationId = button.FavButtonId, Scale = favoriteIconData.Scale, OffsetY = favoriteIconData.OffsetY, OffsetX = favoriteIconData.OffsetX})
                     game.SetAlpha({ Id = favIcon.Id, Fraction = 1.0, Duration = 0.1 })
                 end
             end
