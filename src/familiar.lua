@@ -66,9 +66,6 @@ modutil.mod.Path.Wrap("FamiliarCostumeShopUpdateVisibility", function (base, scr
     return (function (retval)
         args = args or {}
         local components = screen.Components
-
-        screen.ButtonIds = {}
-
         for index, itemName in ipairs( screen.ItemCategories[screen.OpenedFrom.Name] ) do
             local button = components[itemName.."Button"]
             if button then
