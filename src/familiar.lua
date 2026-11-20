@@ -23,13 +23,6 @@ function mod.ToggleFavoriteFamiliarCostume( screen, button )
     if selectedItem == nil then
         return
     end
-    game.GameState.ModFamiliarCostumesFavorites = game.GameState.ModFamiliarCostumesFavorites or {
-        HoundFamiliar = {},
-        FrogFamiliar = {},
-        RavenFamiliar = {},
-        CatFamiliar = {},
-        PolecatFamiliar = {}
-    }
     local IsFavorite = game.GameState.ModFamiliarCostumesFavorites[screen.OpenedFrom.Name][selectedItem.Data.Name]
     if selectedItem.Purchased then
         IsFavorite = not IsFavorite == true
@@ -79,13 +72,6 @@ modutil.mod.Path.Wrap("FamiliarCostumeShopUpdateVisibility", function (base, scr
         for index, itemName in ipairs( screen.ItemCategories[screen.OpenedFrom.Name] ) do
             local button = components[itemName.."Button"]
             if button then
-                game.GameState.ModFamiliarCostumesFavorites = game.GameState.ModFamiliarCostumesFavorites or {
-                    HoundFamiliar = {},
-                    FrogFamiliar = {},
-                    RavenFamiliar = {},
-                    CatFamiliar = {},
-                    PolecatFamiliar = {}
-                }
                 local favIcon = game.CreateScreenComponent({ Name = "BlankObstacle", Group = screen.ComponentData.DefaultGroup, Alpha = 0.0, })
                 components[itemName .. "FavIcon"] = favIcon
                 table.insert( button.AssociatedIds, favIcon.Id )
