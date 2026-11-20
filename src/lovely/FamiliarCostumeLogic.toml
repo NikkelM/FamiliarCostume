@@ -9,11 +9,13 @@ zerpFamiliarCostumeenv = "rom.mods['zerp-Familiar_Costume_Randomizer'].lovely_en
 [patches.pattern]
 target = "FamiliarCostumeLogic.lua"
 pattern = '''
-			local pinIcon = CreateScreenComponent({ Name = "BlankObstacle", Group = screen.ComponentData.DefaultGroup, Alpha = 0.0, })
+local pinIcon = CreateScreenComponent({ Name = "BlankObstacle", Group = screen.ComponentData.DefaultGroup, Alpha = 0.0, })
 '''
 position = "at"
 payload = '''
-			local pinIcon = CreateScreenComponent({ Name = "BlankObstacle", Group = screen.ComponentData.DefaultGroup, Alpha = 0.0, Scale = 0.6 })
+--#region Modified by Familiar Costume Randomizer to adjust pin scale
+local pinIcon = CreateScreenComponent({ Name = "BlankObstacle", Group = screen.ComponentData.DefaultGroup, Alpha = 0.0, Scale = 0.6 })
+--#endregion
 '''
 match_indent = true
 times = 1
@@ -22,11 +24,13 @@ times = 1
 [patches.pattern]
 target = "FamiliarCostumeLogic.lua"
 pattern = '''
-			Attach({ Id = pinIcon.Id, DestinationId = button.Id, OffsetX = screen.PinOffsetX, OffsetY = UIData.PinIconListOffsetY })
+Attach({ Id = pinIcon.Id, DestinationId = button.Id, OffsetX = screen.PinOffsetX, OffsetY = UIData.PinIconListOffsetY })
 '''
 position = "at"
 payload = '''
-			Attach({ Id = pinIcon.Id, DestinationId = button.Id, OffsetX = screen.PinOffsetX, OffsetY = UIData.PinIconListOffsetY + 15 })
+--#region Modified by Familiar Costume Randomizer to adjust pin placement
+Attach({ Id = pinIcon.Id, DestinationId = button.Id, OffsetX = screen.PinOffsetX, OffsetY = UIData.PinIconListOffsetY + 15 })
+--#endregion
 '''
 match_indent = true
 times = 1
@@ -51,6 +55,7 @@ pattern = '''
 '''
 position = "after"
 payload = '''
+		--#region Added by Familiar Costume Randomizer to handle favorite UI indicator
 		GameState.ModFamiliarCostumesFavorites = GameState.ModFamiliarCostumesFavorites or {
 			HoundFamiliar = {},
 			FrogFamiliar = {},
@@ -68,6 +73,7 @@ payload = '''
             SetAnimation({ Name = animationName, DestinationId = button.FavButtonId, Scale = 0.3, OffsetY = 15})
 			SetAlpha({ Id = favIcon.Id, Fraction = 1.0, Duration = 0.1 })
 		end
+		--#endregion
 '''
-match_indent = true
+match_indent = false
 times = 1

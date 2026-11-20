@@ -35,7 +35,6 @@ function mod.ToggleFavoriteFamiliarCostume( screen, button )
             game.SetAlpha({ Id = selectedItem.FavButtonId, Fraction = 0.0, Duration = 0.1 })
         end
     end
-    print(mod.dump(game.GameState.ModFamiliarCostumesFavorites))
 end
 
 function mod.ToggleRandomizeFamiliarCostume(screen, button)
