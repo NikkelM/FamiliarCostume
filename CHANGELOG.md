@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Support additional familiars
+
 ## [1.2.0] - 2026-11-20
 
 - Migrated adding custom familiar skins to the CosmeticsAPI.
