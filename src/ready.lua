@@ -12,9 +12,10 @@ function mod.GetUnlockedFamiliarCostumes(costumeList)
 end
 
 function mod.GetFavorites(costumeList, currentFamiliar)
+    local favorites = mod.GetOrCreateFamiliarCostumeFavorites(currentFamiliar)
     local favoriteCostume = {}
     for _, costume in ipairs(costumeList) do
-        if game.GameState.ModFamiliarCostumesFavorites[currentFamiliar][costume] then
+        if favorites[costume] then
             table.insert(favoriteCostume,costume)
         end
     end
@@ -67,19 +68,4 @@ modutil.mod.Path.Wrap("MouseOffFamiliarCostumeItem", function (base, button)
 		return
 	end
     game.SetAlpha({ Id = screen.Components.FavoriteButton.Id, Fraction = 0.0, Duration = 0.1 })
-end)
-
-modutil.mod.Path.Wrap("GameStateInit", function (base, ...)
-    return (function (retval)
-        if game.GameState then
-            game.GameState.ModFamiliarCostumesFavorites = game.GameState.ModFamiliarCostumesFavorites or {
-                HoundFamiliar = {},
-                FrogFamiliar = {},
-                RavenFamiliar = {},
-                CatFamiliar = {},
-                PolecatFamiliar = {}
-            }
-        end
-        return retval
-    end)(base(...))
 end)
