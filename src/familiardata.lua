@@ -419,6 +419,31 @@ local familiarCostumeData = {
 			{ GlobalVoiceLines = "FamiliarSwitchToDefaultCostumeVoiceLines" },
 		},
 	},
+
+	FamiliarCostume_CerberusDreamEM2 = {
+		Icon = _PLUGIN.guid .. "cerb_dream_em2",
+		InheritFrom = { "DefaultFamiliarCostume" },
+		GrannyModel = "InfestedCerberus_Mesh",
+		GrannyTexture = "GR2/InfestedCerberusDreamEM2_Color",
+		AlwaysRevealImmediately = true,
+
+		Outline = {
+			R = 230,
+			G = 23,
+			B = 0,
+			Alpha = 255,
+			Opacity = 0.8,
+			Thickness = 3,
+			Threshold = 0.6,
+		},
+
+		Cost = {},
+
+		SwitchCostumeVoiceLines =
+		{
+			{ GlobalVoiceLines = "FamiliarSwitchToDefaultCostumeVoiceLines" },
+		},
+	},
 }
 
 local itemCategories = {
@@ -455,6 +480,7 @@ mod.CerbFamiliarItems = {
 	"FamiliarCostume_CerberusEM2",
 	"FamiliarCostume_CerberusDream",
 	"FamiliarCostume_CerberusDreamEM",
+	"FamiliarCostume_CerberusDreamEM2"
 }
 
 if rom.mods["zerp-Cerberus_Familiar"] ~= nil then
@@ -483,6 +509,7 @@ local familiarCostumeNames = {
 	FamiliarCostume_CerberusEM2 = "Unrivaled Phase 2",
 	FamiliarCostume_CerberusDream = "Visage",
 	FamiliarCostume_CerberusDreamEM = "Unrivaled Visage",
+	FamiliarCostume_CerberusDreamEM2 = "Unrivaled Phase 2 Visage"
 }
 
 for familiar, costumeIds in pairs(itemCategories) do
@@ -494,6 +521,7 @@ for familiar, costumeIds in pairs(itemCategories) do
 		costume.Description = { en = "" }
 		costume.IconPath = _PLUGIN.guid .. "/" .. costume.Icon:sub(#_PLUGIN.guid + 1)
 		costume.IconScale = 1.1
+		costume.AutoUnlock = true
 		CosmeticsAPI.RegisterFamiliarCostume(costume)
 	end
 end
