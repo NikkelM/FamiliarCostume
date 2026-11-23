@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+- Auto unlock all custom skins.
+- Add missing Cerberus Unrivaled Phase 2 Visage skin.
+
 ## [1.2.0] - 2026-11-20
 
 - Migrated adding custom familiar skins to the CosmeticsAPI.
