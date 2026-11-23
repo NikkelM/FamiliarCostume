@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-11-23
+
 - Auto unlock all custom skins.
 - Add missing Cerberus Unrivaled Phase 2 Visage skin.
 
@@ -26,7 +28,8 @@
 
 - First version of the mod!
 
-[unreleased]: https://github.com/adi1998/FamiliarCostume/compare/1.2.0...HEAD
+[unreleased]: https://github.com/adi1998/FamiliarCostume/compare/1.3.0...HEAD
+[1.3.0]: https://github.com/adi1998/FamiliarCostume/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/adi1998/FamiliarCostume/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/adi1998/FamiliarCostume/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/adi1998/FamiliarCostume/compare/1.0.2...1.1.0
